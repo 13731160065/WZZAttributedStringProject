@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "WZZAttributedString是一个方便易用的富文本工具类，可以方便的组织NSAttributedString富文本，使用便捷，创建富文本类后只需设置属性即可，支持链式编程"
+  s.description  = "WZZAttributedString是一个方便易用的富文本工具类，可以方便的组织NSAttributedString富文本，使用便捷，支持所有系统自带富文本操作，前景颜色、背景颜色、字体、下划线、链接(仅UITextView可用)、段落样式、阴影等，创建富文本类后只需设置属性即可，支持链式编程"
 
   s.homepage     = "https://github.com/13731160065/WZZAttributedStringProject"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
