@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ojc-WG-Ulr">
+                                <rect key="frame" x="0.0" y="172" width="414" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jhp-sd-qb3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ww2-Hw-IWs"/>
+                                </connections>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LQu-N6-fie">
+                                <rect key="frame" x="0.0" y="44" width="414" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="lk9-ez-Wi0"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DZ-yF-9em">
+                                <rect key="frame" x="312.5" y="64" width="81.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="收起键盘"/>
+                                <connections>
+                                    <action selector="dismissKeyBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uqq-IW-5at"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LQu-N6-fie" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1zR-2T-nCD"/>
+                            <constraint firstItem="Ojc-WG-Ulr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="64l-bB-hBQ"/>
+                            <constraint firstItem="8DZ-yF-9em" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="MSm-GT-HNg"/>
+                            <constraint firstItem="Ojc-WG-Ulr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cMC-Sv-CCY"/>
+                            <constraint firstItem="LQu-N6-fie" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cc0-cD-K18"/>
+                            <constraint firstItem="Ojc-WG-Ulr" firstAttribute="top" secondItem="LQu-N6-fie" secondAttribute="bottom" id="daS-qE-Rxo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LQu-N6-fie" secondAttribute="trailing" id="itI-cZ-rZE"/>
+                            <constraint firstItem="Ojc-WG-Ulr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uWc-ve-iLG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8DZ-yF-9em" secondAttribute="trailing" constant="20" id="vpo-Jh-eak"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ojc-WG-Ulr" id="UKn-ve-Dro"/>
+                        <outlet property="textView" destination="LQu-N6-fie" id="hA3-Ki-yQX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
